@@ -99,14 +99,48 @@ def Tab_5G_Sum(Exe5GSumm):
     Video_Term5G = Exe5GSumm['H13'].value
     Video_Lc5G = Exe5GSumm['H14'].value
 
+def Tab_CAT_Sum(ExeCAT1Summ):
+    #CAT-M1 Features
+    CATM1_GSMA = ExeCAT1Summ['C9'].value
+    CATM1_Perform = ExeCAT1Summ['C10'].value
+    CATM1_UICC = ExeCAT1Summ['C11'].value
+    CATM1_SMS = ExeCAT1Summ['C12'].value
+    CATM1_Pwr = ExeCAT1Summ['C13'].value
+    #Data Performance
+    CATM1_DL = ExeCAT1Summ['B27'].value   #2.14
+    CATM1_UL = ExeCAT1Summ['B28'].value   #2.15
+    #Mixed LTE Calls
+    CATM1_Origs = ExeCAT1Summ['C32'].value  # 2.18
+    CATM1_Terms = ExeCAT1Summ['C33'].value  # 2.19
+    CATM1_LC = ExeCAT1Summ['C34'].value  # 2.20
 
+def Tab_NB_Sum(ExeNBSumm):
+    #CAT-M1 Features
+    NB_GSMA = ExeNBSumm['H9'].value
+    NB_Perform = ExeNBSumm['H10'].value
+    NB_UICC = ExeNBSumm['H11'].value
+    NB_SMS = ExeNBSumm['H12'].value
+    NB_Pwr = ExeNBSumm['H13'].value
+    #Data Performance
+    NB_DL = ExeNBSumm['G27'].value   #2.14
+    NB_UL = ExeNBSumm['G28'].value   #2.15
+    #Mixed LTE Calls
+    NB_Origs = ExeNBSumm['H32'].value  # 2.18
+    NB_Terms = ExeNBSumm['H33'].value  # 2.19
+    NB_LC = ExeNBSumm['H34'].value  # 2.20
+
+#def Tab_Issues_List(IssueList):
 
 ExeSumm2 = wb.worksheets[2]
 Tab_4G_Sum(ExeSumm2)
 Exe5GSumm2 = wb.worksheets[3]
 Tab_5G_Sum(Exe5GSumm2)
-#ExeCAT1Summ = wb.worksheets[4]
-IssueList = wb.worksheets[5]
+ExeCAT1Summ2 = wb.worksheets[4]
+Tab_CAT_Sum(ExeCAT1Summ2)
+Tab_NB_Sum(ExeCAT1Summ2)
+#IssueList2 = wb.worksheets[5]
+#Tab_Issues_List(IssueList2)
+
 #print(ExeSumm['C9'].value)
 
 
